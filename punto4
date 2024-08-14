@@ -1,0 +1,46 @@
+import java.util.Scanner;
+public class Acti1Punto4 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+                Scanner scanner = new Scanner(System.in);
+        int[] num = new int[10];
+        int[] frecuen = new int[10];
+        int sum = 0;
+
+        for (int i = 0; i < num.length; i++) {
+            System.out.print("Ingresa el número " + (i + 1) + ": ");
+            num[i] = scanner.nextInt();
+            sum += num[i];
+        }
+
+        for (int i = 0; i < num.length; i++) {
+            int count = 0;
+            for (int j = 0; j < num.length; j++) {
+                if (num[i] == num[j]) {
+                    count++;
+                }
+            }
+            frecuen[i] = count;
+        }
+
+        System.out.println("\nFrecuencia de los números ingresados:");
+        for (int i = 0; i < num.length; i++) {
+            boolean cuenta = false;
+            for (int j = 0; j < i; j++) {
+                if (num[i] == num[j]) {
+                    cuenta = true;
+                    break;
+                }
+            }
+            if (!cuenta) {
+                System.out.println("El número " + num[i] + " se ingresó " + frecuen[i] + " veces.");
+            }
+        }
+
+        double promedio = (double) sum / num.length;
+        System.out.println("\nEl promedio de los números ingresados es: " + promedio);
+    }
+}
