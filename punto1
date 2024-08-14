@@ -1,0 +1,16 @@
+import java.util.Scanner;
+public class Acti1Punto1 {
+
+    public static void main(String[] args) {
+        int multipli,N,c;
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("ingrese el numero que desea multiplicar");
+        N=scanner.nextInt();
+        for(c=1;c<11;c++){
+            multipli=N*c;
+            System.out.println(N+"*"+c+"="+multipli);
+        }
+        
+    }
+    
+}
