@@ -1,0 +1,33 @@
+import java.util.Scanner;
+public class Acti1Punto5 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        double suma=0;
+        double[][] notas=new double[5][4];
+        for (int i = 0; i < 5; i++) {
+                 suma=suma*0;
+                System.out.println("porfavor ingresar las notas del "+(i+1)+" estudiante");
+            for (int j = 0; j < 3; j++) {
+                notas[i][j] =scanner.nextDouble();
+                suma+=notas[i][j];
+                
+              }
+           
+            notas[i][3] =suma/3;
+          }
+        
+        System.out.println("resultado");
+        
+         for (int j = 0; j < 4; j++) {
+            for (int i = 0; i < 5; i++) {
+                System.out.print(notas[i][j] + "\t");
+            }
+            System.out.println("\n");
+        }
+    }
+    
+}
