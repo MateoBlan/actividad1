@@ -1,0 +1,30 @@
+import java.util.Scanner;
+
+public class Acti1Punto2 {
+    public static void main(String[] args) {
+        Scanner mateo = new Scanner(System.in);
+        int cont;
+        System.out.println("ingrese la cantidad de numeros que desea ingresar");
+        cont=mateo.nextInt();
+        int vector[]=new int [cont];
+        int negativo=0, positivo=0,zero=0 ;
+        for(int conta=0;conta<cont;conta++){
+            System.out.println("ingresa el "+(conta+1)+" numero");
+            vector[conta]=mateo.nextInt();
+        }
+        for(int cont2=0;cont2<cont;cont2++){
+            if(vector[cont2]<0){
+                negativo++;
+            }else{
+                if(vector[cont2]>0){
+                positivo++;
+                }else{
+                zero++;
+        }
+    }
+        }
+        System.out.println("son "+positivo+" numeros positivos");
+        System.out.println("son "+negativo+" numeros negativos");
+        System.out.println("son "+zero+" ceros");
+    }
+}
