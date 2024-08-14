@@ -1,0 +1,25 @@
+import java.util.Scanner;
+public class Acti1Punto3 {
+
+    public static void main(String[] args) {
+      Scanner scanner = new Scanner(System.in);
+      int c,edad;
+        
+        do{System.out.println("por favor ingresar su edad");
+            edad= scanner.nextInt();
+        if(edad >= 18){
+            System.out.println("""
+                               usted es una persona apta para votar
+                               """);
+        }else{
+            System.out.println(""" 
+                               usted no es una persona apta para votar
+                               """);
+        }
+        c=edad;
+       }while(c != 1970);
+        System.out.println("valor centinela ingresado correctamente");
+        System.out.println("proceso finalizado");
+    }
+    
+}
